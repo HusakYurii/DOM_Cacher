@@ -1,4 +1,4 @@
-import DOMCacher from "./libs/cache/DOMCacher.js";
+import { DOMCacher } from "./libs/cache/index.js";
 
 const cache = new DOMCacher();
 
