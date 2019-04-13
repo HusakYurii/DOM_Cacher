@@ -1,9 +1,10 @@
 # DOM Cacher
 ## About:
 Once working on a small projects you might want to keep all references to dom elements in some cache, so you have access ti them.
-You can use this DOM Cacher, just create an instance of it and add elements to cache using its API
+You can use this DOM Cacher, just create an instance of it and add elements to cache using its API.
+P.S the html file looks like [this](https://husakyurii.github.io/DOM_Cacher/.)
 
-```
+```js
 const cache = new DOMCacher();
 
 // To add
