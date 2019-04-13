@@ -1,4 +1,4 @@
-import {trim, toCamelCase, takeWords} from "./utils/index.js";
+import {trim, toCamelCase, takeWords} from "../utils/utils.js";
 
 class DOMCacher {
     constructor() {
