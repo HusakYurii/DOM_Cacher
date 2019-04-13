@@ -1,0 +1,163 @@
+/*===== F O N T S ======*/
+@import url('https://fonts.googleapis.com/css?family=Cabin|Comfortaa|Sedgwick+Ave|Sedgwick+Ave+Display');
+
+/*These fonts are used:
+font-family: 'Sedgwick Ave Display', cursive;
+font-family: 'Comfortaa', cursive;
+font-family: 'Cabin', sans-serif;
+font-family: 'Sedgwick Ave', cursive;*/
+/*========= M A I N =======*/
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+* {
+    font-family: 'Cabin', 'Arial', sans-serif;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1.2;
+    letter-spacing: 0.05rem;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-color: #f4f1e1;
+}
+
+/*======= T Y P O G R A P H Y ======= */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Sedgwick Ave', cursive;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.05rem;
+    padding: 15px 0 15px 0;
+}
+
+h1 {
+    font-size: 8rem;
+    font-family: 'Sedgwick Ave Display', cursive;
+    -webkit-transition: color 0.7s;
+    -o-transition: color 0.7s;
+    transition: color 0.7s;
+    color: black;
+}
+
+h1:hover {
+    color: rgba(255, 112, 112, 1);
+}
+
+h2 {
+    font-size: 4rem;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+h4 {
+    font-size: 2.5rem;
+}
+
+h5 {
+    font-size: 2rem;
+}
+
+p {
+    font-size: 2.5rem;
+    font-weight: normal;
+}
+
+span {
+    font-size: 2.5rem;
+    font-family: 'Sedgwick Ave', cursive;
+}
+
+label {
+    font-size: 2rem;
+    color: black;
+    padding: 15px 0 0 0;
+}
+
+a {
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 3rem;
+    font-family: 'Sedgwick Ave', cursive;
+    padding: 10px;
+    border-bottom: 2px solid transparent;
+    -webkit-transition: border-bottom 0.7s, color 0.7s;
+    -o-transition: border-bottom 0.7s, color 0.7s;
+    transition: border-bottom 0.7s, color 0.7s;
+}
+
+a:hover {
+    color: rgba(255, 112, 112, 1);
+    border-bottom: 2px solid #fb6e7c;
+}
+
+main {
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px 0 20px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+main > form {
+    -ms-flex-preferred-size: 80%;
+    flex-basis: 80%;
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+    padding: 15px 15px;
+}
+
+main > form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column;
+    flex-flow: column;
+    color: black;;
+}
+
+input[type="text"],
+textarea, input[type="submit"] {
+    background-color: rgba(255, 112, 112, 0.4);
+    font-size: 1.5rem;
+    color: black;
+    margin: 5px 0 10px 0;
+    padding: 12px;
+    border: 2px solid black;
+    border-radius: 10px;
+    outline: none;
+    -webkit-transition: background-color 0.7s;
+    -o-transition: background-color 0.7s;
+    transition: background-color 0.7s;
+}
+
+input[type="submit"] {
+    width: 40%;
+}
+
+input[type="text"]:hover, textarea:hover,
+input[type="submit"]:hover {
+    background-color: rgba(255, 112, 112, 0.2);
+}
+
+textarea {
+    resize: none;
+}

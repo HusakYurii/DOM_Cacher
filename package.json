@@ -1,0 +1,16 @@
+{
+  "name": "DOM_Cacher",
+  "version": "1.0.0",
+  "description": "Using an array of elements which need to be cached on the page. The Cacher will preload the elements from page",
+  "main": "server.js",
+  "scripts": {
+    "test": "node --inspect-brk server.js",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "Husak Yurii",
+  "license": "ISC",
+  "devDependencies": {
+    "node-static": "^0.7.11"
+  }
+}

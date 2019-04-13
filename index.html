@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Feedback Form</title>
+
+    <meta name="description" content="">
+    <meta name="keywords" content="form, feedback form">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="stylesheet" href="css/index.css">
+    <script type="module" src="index.js"></script>
+</head>
+<body>
+<main>
+    <form id="feedback-form" method="POST">
+        <h3>Let's keep in touch!</h3>
+        <p>
+            If you are eager to make your party gorgeous and memorable then you should contact us!
+        </p>
+        <label>Your Name</label>
+        <input type="text" name="name" placeholder="James Doe" required="required">
+        <label>Your e-mail</label>
+        <input type="text" name="email" placeholder="JamesDoe@domain" required="required">
+        <label>Your message</label>
+        <textarea name="message" placeholder="..." required="required" rows="10"></textarea>
+        <input type="submit" value="Send">
+    </form>
+</main>
+</body>
+</html>
