@@ -37,8 +37,21 @@ const toCamelCase = function (params) {
     });
 };
 
+const isObject = function (input) {
+    /**
+     * This function checks whether an given input is Object or not
+     * @param {Object} input - actually it can be any value
+     * @return {Boolean}
+     * */
+
+    if (!input) return false; // cuts off all falsy values such as "", null, undefined, null etc.
+    // is it object but it does not have methods of Array/String/Number
+    return (typeof input === "object") && !input.map && !input.toFixed && !input.length;
+};
+
 export {
     trim,
     takeWords,
-    toCamelCase
+    toCamelCase,
+    isObject
 }
