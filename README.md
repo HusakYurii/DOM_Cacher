@@ -22,6 +22,17 @@ cache.hasElement('feedbackForm');
 
 // To take an element
 cache.getElement('feedbackForm');
+
+// To clean cache from previous elements
+cache.clearCache();
+
+// To cache elements from Object with custom names for an elements
+cache.addElement({
+    TEXT_INPUTS: 'input[type="text"]',
+    __MAIN: 'main',
+    $FEEDbackForm$: '#feedback-form'
+});
+
 ....
 
 ```
