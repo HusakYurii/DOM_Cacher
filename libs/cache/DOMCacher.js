@@ -1,4 +1,4 @@
-import {trim, toCamelCase, takeWords} from "../utils/utils.js";
+import {isObject, toCamelCase, takeWords} from "../utils/utils.js";
 
 class DOMCacher {
     constructor() {
@@ -45,9 +45,15 @@ class DOMCacher {
 
     addElement(selector) {
         /** Add elements to the cache
-         * @param {String|Array} selector - a valid css selector or list of valid css selectors
+         * @param {String|Array|Object} selector - a valid css selector or list of valid css selectors
          * */
-        if (!Array.isArray(selector)) selector = [...arguments];
+        if (isObject(selector)) {
+            this.cache = this._cacheFromObject(selector);
+            return;
+        }
+        if (!Array.isArray(selector)) {
+            selector = [...arguments];
+        }
         this.cache = this._cacheFromArray(selector);
     }
 
@@ -63,15 +69,28 @@ class DOMCacher {
     }
 
 
-    // _cacheFromObject(data) {
-    // TODO finish this function. If a user wants to use it's own names for cached elements this function must be used
-    //     /**
-    //      * @private
-    //      * @param {Object} data - a list "key: value" pairs
-    //      * Where "key" will be set as a "name" of cashed element
-    //      * and "value" is a valid css selectors which will be used for searching of an element.
-    //      * */
-    // }
+    _cacheFromObject(selectors) {
+        /**
+         * @private
+         * @param {Object} data - a list "key: value" pairs
+         * where "key" will be set as a "name" of cashed element
+         * and "value" is a valid css selectors which will be used for searching of an element.
+         * */
+        if (this.isCacheEmpty) this.clearCache();
+
+        const cacheed = {};
+
+        for (let name in selectors) {
+            if (!selectors.hasOwnProperty(name)) continue;
+
+            const elements = document.querySelectorAll(selectors[name]);
+
+            if (elements.length > 1) cacheed[name] = [...elements];
+            else cacheed[name] = elements[0];
+        }
+
+        return cacheed
+    }
 
     _cacheFromArray(selectors) {
         /**
