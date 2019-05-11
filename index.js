@@ -14,3 +14,13 @@ console.log(`Is 'trololo' in cache: ${cache.hasElement('trololo')}`);
 
 console.dir(cache.deleteElement('feedbackForm'));
 console.log(`Is 'feedbackForm' in cache after it has been removed: ${cache.hasElement('feedbackForm')}`);
+
+cache.clearCache();
+
+cache.addElement({
+    TEXT_INPUTS: 'input[type="text"]',
+    __MAIN: 'main',
+    $FEEDbackForm$: '#feedback-form'
+});
+
+console.dir(Object.assign({}, cache.cache));
